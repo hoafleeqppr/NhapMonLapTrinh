@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APP CACULATION</title>
+</head>
+<body>
+<table>
+    <h2>APP CACULATION</h2>
+    <tr>
+        <td>
+            <input type="number" id="number1" placeholder="Nhập số thứ nhất">
+        </td>
+        <td>
+            <input type="number" id="number2" placeholder="Nhập số thứ hai">
+        </td>
+        <td>
+            <button onclick="add()">Cộng</button>
+        </td>
+        <td>
+            <button onclick="minus()">Trừ</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>RESULT:</p>
+        </td>
+        <td>
+            <p id="result">...</p>
+        </td>
+    </tr>
+</table>
+<script>
+    function add() {
+        let number1 = document.getElementById("number1").value;
+        let number2 = document.getElementById("number2").value;
+        let result = Number(number1) + Number(number2);
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function minus() {
+        let number1 = document.getElementById("number1").value;
+        let number2 = document.getElementById("number2").value;
+        let result = Number(number1) - Number(number2);
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
