@@ -42,16 +42,21 @@
         let sotien = document.getElementById("money").value;
         let select1 = document.getElementById("select1").value;
         let select2 = document.getElementById("select2").value;
-        if (select1 == select2) {
-            document.getElementById("result").innerHTML = sotien;
+        if (select1 == "a" && select2 == "a") {
+            document.getElementById("result").innerHTML = sotien + "Đ";
+        }
+        else {
+            document.getElementById("result").innerHTML = sotien + "$";
         }
         if (select1 == "a" && select2 == "b") {
             document.getElementById("result").innerHTML = sotien/23000 + "Đ";
         }
+        // else {
+        //     document.getElementById("result").innerHTML = sotien*23000 + "$";
+        // }
         if (select1=="b" && select2=="a") {
             document.getElementById("result").innerHTML = sotien*23000 + "$";
         }
-
     }
 
 </script>
