@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BANK INTEREST RATE</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label for="year">So Nam:</label>
+            <input type="number" id="year" name="year">
+        </td>
+        <td><label for="money">So tien ( Trieu Dong ):</label>
+            <input type="number" id="money" name="money">
+        </td>
+        <td><label for="interest">Lai suat ( % ):</label>
+            <input type="number" id="interest" name="interest">
+        </td>
+        <td>
+            <button onclick="calculate()">Ket Qua</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>So tien phai tra sau N nam ( Trieu Dong ) :</p>
+        </td>
+        <td>
+            <p id="result"></p>
+        </td>
+    </tr>
+</table>
+<script>
+    function calculate() {
+        let SoNam = document.getElementById("year").value;
+        let SoTien = document.getElementById("money").value;
+        let LaiSuat = document.getElementById("interest").value;
+        let LaiHangNam = Number(SoTien) * Number(LaiSuat) / 100;
+        let KetQua = Number(SoTien) + Number(SoNam * LaiHangNam);
+        document.getElementById("result").innerHTML = KetQua;
+    }
+
+</script>
+</body>
+</html>

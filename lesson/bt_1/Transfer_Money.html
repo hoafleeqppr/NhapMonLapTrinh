@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer Money</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="money">
+        </td>
+        <td>
+            <select id="select1">
+                <option value="a">VND</option>
+                <option value="b">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="select2">
+                <option value="b">USD</option>
+                <option value="a">VND</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="convert()">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <td><p>Result : </p></td>
+        <td><p id="result">...</p></td>
+    </tr>
+</table>
+<script>
+    function convert() {
+        let sotien = document.getElementById("money").value;
+        let select1 = document.getElementById("select1").value;
+        let select2 = document.getElementById("select2").value;
+        if (select1 == select2) {
+            document.getElementById("result").innerHTML = sotien;
+        }
+        if (select1 == "a" && select2 == "b") {
+            document.getElementById("result").innerHTML = sotien/23000;
+        }
+        if (select1=="b" && select2=="a") {
+            document.getElementById("result").innerHTML = sotien*23000;
+        }
+
+    }
+
+</script>
+</body>
+</html>
