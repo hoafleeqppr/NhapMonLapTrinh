@@ -18,14 +18,14 @@
         </td>
         <td>
             <select id="select1">
-                <option value="a">VND</option>
-                <option value="b">USD</option>
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
             </select>
         </td>
         <td>
             <select id="select2">
-                <option value="b">USD</option>
-                <option value="a">VND</option>
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
             </select>
         </td>
         <td>
@@ -42,19 +42,14 @@
         let sotien = document.getElementById("money").value;
         let select1 = document.getElementById("select1").value;
         let select2 = document.getElementById("select2").value;
-        if (select1 == "a" && select2 == "a") {
-            document.getElementById("result").innerHTML = sotien + " Đ";
+        if (select1 == "VND" && select2 == "USD") {
+            document.getElementById("result").innerHTML = sotien / 23000 + " Đ";
+        } else if (select1 == "USD" && select2 == "VND") {
+            document.getElementById("result").innerHTML = sotien * 23000 + " $";
+        } else if (select1 == "VND") {
+            document.getElementById("result").innerHTML = sotien + " D";
         } else {
             document.getElementById("result").innerHTML = sotien + " $";
-        }
-        if (select1 == "a" && select2 == "b") {
-            document.getElementById("result").innerHTML = sotien/23000 + " $";
-        }
-        // else {
-        //     document.getElementById("result").innerHTML = sotien*23000 + "$";
-        // }
-        if (select1=="b" && select2=="a") {
-            document.getElementById("result").innerHTML = sotien*23000 + " Đ";
         }
     }
 </script>
