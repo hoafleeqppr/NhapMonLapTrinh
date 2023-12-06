@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BMI</title>
 </head>
 <body>
-
+<p id="result"></p>
+<script>
+    let high = +prompt("chieu cao cua ban (cm)");
+    let weight = +prompt("can nang cua ban (kg)");
+    let bmi = weight/ ((high/100) ** 2);
+    console.log(bmi);
+    if (bmi < 16) {
+        document.getElementById("result").innerHTML = "Gầy độ III";
+    } else if (16 <= bmi && bmi < 17) {
+        document.getElementById("result").innerHTML = " Gầy độ II";
+    } else if (17 <= bmi && bmi < 18.5) {
+        document.getElementById("result").innerHTML = " Gầy độ I";
+    } else if (18.5 <= bmi && bmi < 25) {
+        document.getElementById("result").innerHTML = " Bình thường";
+    } else if (25 <= bmi && bmi < 30) {
+        document.getElementById("result").innerHTML = " Thừa cân";
+    } else if (30 <= bmi && bmi < 35) {
+        document.getElementById("result").innerHTML = " Béo phì độ 1";
+    } else if (35 <= bmi && bmi < 40) {
+        document.getElementById("result").innerHTML = " Béo phì độ II";
+    } else {
+        document.getElementById("result").innerHTML = " Béo phì độ III";
+    }
+</script>
 </body>
 </html>
