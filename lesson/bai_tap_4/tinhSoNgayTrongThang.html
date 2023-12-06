@@ -5,6 +5,41 @@
     <title>Tinh So Ngay Trong Thang</title>
 </head>
 <body>
+<form>
+    Nhập Tháng cần kiểm tra:
+    <input id="thang" type="text">
+    <input type="button" value="Tính số ngày" onclick="tinhNgay()">
+    <p id="result"></p>
+</form>
+</body>
+<script>
+    function tinhNgay() {
+        let month = parseInt(document.getElementById("thang").value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("result").innerHTML = "tháng " + month + " có 31 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("result").innerHTML = "tháng " + month + " có 30 ngày";
+                break;
+            case 2:
+                document.getElementById("result").innerHTML = "tháng " + month + " có 28 hoac 29 ngày";
+                break;
+            default:
+                document.getElementById("result").innerHTML = "không có tháng này";
+                break;
+        }
+    }
+</script>
 <p class=""></p>
 </body>
 </html>
