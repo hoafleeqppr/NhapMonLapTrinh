@@ -39,17 +39,18 @@
 </table>
 <script>
     function convert() {
-        let sotien = document.getElementById("money").value;
+        let soTien = document.getElementById("money").value;
         let select1 = document.getElementById("select1").value;
         let select2 = document.getElementById("select2").value;
+        let tyGia = 23000 ;
         if (select1 == "VND" && select2 == "USD") {
-            document.getElementById("result").innerHTML = sotien / 23000 + " Đ";
+            document.getElementById("result").innerHTML = soTien / tyGia + " Đ";
         } else if (select1 == "USD" && select2 == "VND") {
-            document.getElementById("result").innerHTML = sotien * 23000 + " $";
+            document.getElementById("result").innerHTML = soTien * tyGia + " $";
         } else if (select1 == "VND") {
-            document.getElementById("result").innerHTML = sotien + " D";
+            document.getElementById("result").innerHTML = soTien + " D";
         } else {
-            document.getElementById("result").innerHTML = sotien + " $";
+            document.getElementById("result").innerHTML = soTien + " $";
         }
     }
 </script>
