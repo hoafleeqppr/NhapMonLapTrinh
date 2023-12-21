@@ -8,19 +8,19 @@
 <input type="button" value="Doan So" onclick="DoanSo()"> Game đoán số
 <script>
     function DoanSo() {
-        let phamvi = +prompt("Trò chơi đoán số từ 0 - ")
-        let nhapso = +prompt("Nhập vào số muốn đoán")
-        let soRamdom
-        if (phamvi) {
-            soRamdom = Math.floor(Math.random() * phamvi)
-            if (soRamdom == nhapso) {
-                alert("Bạn đã đoán đung")
+        let range = +prompt("Trò chơi đoán số từ 0 - ");
+        let numberChoose = +prompt("Nhập vào số muốn đoán");
+        let numberRandom;
+        if (range) {
+            numberRandom = Math.floor(Math.random() * range);
+            if (numberRandom == numberChoose) {
+                alert("Bạn đã đoán đung");
             } else {
-                while (soRamdom != nhapso) {
-                    alert("Bạn đoán sai số đúng là " + soRamdom)
-                    nhapso = Number(prompt("Nhập vào số muốn đoán"))
+                while (numberRandom != numberChoose) {
+                    alert("Bạn đoán sai số đúng là " + numberRandom);
+                    numberChoose = +prompt("Nhập vào số muốn đoán");
                 }
-                alert("Bạn đoán đúng")
+                alert("Bạn đoán đúng");
             }
         }
     }
