@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameDoanSo</title>
+</head>
+<body>
+<input type="button" value="Doan So" onclick="DoanSo()"> Game đoán số
+<script>
+    function DoanSo() {
+        let range = +prompt("Trò chơi đoán số từ 0 - ");
+        let numberChoose = +prompt("Nhập vào số muốn đoán");
+        let numberRandom;
+        if (range) {
+            numberRandom = Math.floor(Math.random() * range);
+            if (numberRandom == numberChoose) {
+                alert("Bạn đã đoán đung");
+            } else {
+                while (numberRandom != numberChoose) {
+                    alert("Bạn đoán sai số đúng là " + numberRandom);
+                    numberChoose = +prompt("Nhập vào số muốn đoán");
+                }
+                alert("Bạn đoán đúng");
+            }
+        }
+    }
+</script>
+</body>
+</html>
