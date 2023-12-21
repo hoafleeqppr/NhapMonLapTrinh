@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci</title>
+</head>
+<body>
+<button id="soN" type="button" onclick="result()">fibonacci</button>
+<script>
+    function result() {
+        let a = 1, b = 1;
+        let num = +prompt('Nhap vao so N');
+        if (num >= 1) {
+            document.write(a + '</br>');
+        }
+        if (num >= 2) {
+            document.write(b + '</br>');
+        }
+        let i = 2;
+        while (i < num) {
+            let nextNum = a + b;
+            document.write(nextNum + '</br>');
+            a = b;
+            b = nextNum;
+            i++;
+        }
+    }
+</script>
+</body>
+</html>
